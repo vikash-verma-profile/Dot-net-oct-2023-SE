@@ -1,0 +1,7 @@
+1.visual studio 2022==>https://visualstudio.microsoft.com/vs/
+2.sql server ==> SSMS==>https://www.microsoft.com/en-in/sql-server/sql-server-downloads (use Developer one)
+3.Google crome
+4.SSMS=>https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+5.Postman==>https://www.postman.com/downloads/
+6.Have Github account
+
