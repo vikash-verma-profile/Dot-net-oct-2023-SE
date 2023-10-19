@@ -8,7 +8,7 @@ namespace Day_2
 {
     internal class arrays5
     {
-        public static void Main()
+        public static void Main5()
         {
             //int[] testarr = { 1, 2, 3, 4, 5, 6, 7, };
             int[] testarr = new int[3];//7 variables of type int
