@@ -4,6 +4,8 @@ IF/else/if
 
 switch()
 
+Problem statement -1
+
 create a program to do all the arimathic operations
 
 print the below menu and ask user to enter some choice
@@ -11,5 +13,50 @@ print the below menu and ask user to enter some choice
 2.MUL
 3.SUB
 4.Divide
+5.Exit
 
 use case statement
+
+loops
+
+1-10
+
+1.for loops for(<>;<>;<>)
+2.while loops while(){} Entry controlled loop
+3.do while loops do{} while() exit controlled loop
+4.foreach foreach()
+
+problem statement
+
+1.calculate the number that we have in a list from 1-10 are odd or even (1 is odd, 2 is even )
+2.calculate the sum of numbers from 1-10 are odd or even (1+2+3---10)
+
+3.use the above conditional progaram and add loop into that .
+
+Output
+print the below menu and ask user to enter some choice
+1.Add
+2.MUL
+3.SUB
+4.Divide
+5.Exit
+
+1==> user input as choice
+2+3=5==> result of choice
+
+1.Add
+2.MUL
+3.SUB
+4.Divide
+5.Exit
+
+2==> user input as choice
+2*3=6==> result of choice
+1.Add
+2.MUL
+3.SUB
+4.Divide
+5.Exit
+
+5==> exit
+
