@@ -1,0 +1,15 @@
+
+IF/else
+IF/else/if
+
+switch()
+
+create a program to do all the arimathic operations
+
+print the below menu and ask user to enter some choice
+1.Add
+2.MUL
+3.SUB
+4.Divide
+
+use case statement
