@@ -8,7 +8,7 @@ namespace Day_2
 {
     internal class loops
     {
-        public static void Main()
+        public static void Main2()
         {
             for (int i = 0; i < 0; i++)
             {
