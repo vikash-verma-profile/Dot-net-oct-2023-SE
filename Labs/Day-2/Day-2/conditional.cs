@@ -8,7 +8,7 @@ namespace Day_2
 {
     internal class conditional
     {
-        public static void Main()
+        public static void Main3()
         {
             bool breakFlag = false; //break condition so that we can break
             //our infinite loop
