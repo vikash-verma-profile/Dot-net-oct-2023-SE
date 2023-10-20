@@ -24,14 +24,24 @@ namespace Day_3
             Console.WriteLine(a+b);
         }
        
-        public static void Main()
+        public static void sumP(int a,int b=2)
+        {
+            Console.WriteLine(a+b);
+        }
+        public static void SumN(int a,int b,int c)
+        {
+            Console.WriteLine(a+b+c);
+        }
+        public static void Main5()
         {
             int result,Number1, Number2;
-            Number1 = 1;
-            Number2=2;
-            sumOut(Number1, Number2, out result);
-            sumRef(ref Number1,ref Number2);
-            Console.WriteLine(result);
+            //Number1 = 1;
+            //Number2=2;
+            //sumOut(Number1, Number2, out result);
+            //sumRef(ref Number1,ref Number2);
+            //Console.WriteLine(result);
+            sumP(1,5);
+            SumN(c: 3, a: 8, b: 9);
         }
     }
 }
