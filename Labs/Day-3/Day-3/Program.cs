@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int[,] matrix = new int[2, 2];
             Console.WriteLine("Please enter values");
