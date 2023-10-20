@@ -8,7 +8,7 @@ namespace Day_3
 {
     internal class jaggedarray2
     {
-        public static void Main()
+        public static void Main2()
         {
             int[][] jagged_array = new int[3][];
             jagged_array[0] = new int[] { 1, 2 };
