@@ -8,7 +8,7 @@ namespace Day_3
 {
     internal class nullable3
     {
-        public static void Main()
+        public static void Main3()
         {
             int ?a = null;
             Console.WriteLine(a);
