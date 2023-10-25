@@ -62,6 +62,11 @@ namespace Day_4
             }
             return studentList;
         }
+
+        public static Student[] DeleteStudentByRollNO(int rollno, Student[] students)
+        {
+
+        }
     }
     public class Program
     {
@@ -94,6 +99,10 @@ namespace Day_4
                         Console.WriteLine("your record is being updated successfully");
                         break;
                     case 3:
+                        Console.WriteLine("Please enter student Roll no");
+                        Student.PrintStudentList(studentList);
+                        int RollNoNew = int.Parse(Console.ReadLine());
+                        studentList = Student.DeleteStudentByRollNO(RollNoNew, studentList);
                         Console.WriteLine("your record is being deleted successfully");
                         break;
                     case 4:
