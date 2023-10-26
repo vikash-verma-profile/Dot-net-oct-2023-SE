@@ -11,15 +11,21 @@ namespace Day_5
         //public Sample() {
         //    Console.WriteLine("Hello i am coming from sample");
         //}
+        
         public Sample(int x)
         {
             Console.WriteLine("x is " + x);    
+        }
+        public void Print()
+        {
+            Console.WriteLine("Hello");
         }
     }
     class Sample2:Sample
     {
         public Sample2(int y):base(y)
         {
+            base.Print();
             Console.WriteLine("Hello i am coming from sample2");
         }
     }
