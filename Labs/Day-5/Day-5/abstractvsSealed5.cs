@@ -29,7 +29,7 @@ namespace Day_5
     }
     internal class abstractvsSealed5
     {
-        public static void Main()
+        public static void Main5()
         {
             A a=new A();
            // AA a = new AA();
