@@ -22,7 +22,7 @@ namespace Day_5
     }
     internal class overriding3
     {
-        public static void Main()
+        public static void Main3()
         {
             class1 c = new class2();
             c.show();
