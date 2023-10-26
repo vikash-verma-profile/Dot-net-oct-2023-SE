@@ -31,7 +31,7 @@ namespace Day_5
     }
     internal class baseke4
     {
-        public static void Main()
+        public static void Main4()
         {
             Sample2 s = new Sample2(8);
         }
