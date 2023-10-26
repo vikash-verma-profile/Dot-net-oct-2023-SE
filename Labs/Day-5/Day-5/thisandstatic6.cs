@@ -34,7 +34,7 @@ namespace Day_5
     }
     internal class thisandstatic6
     {
-        public static void Main()
+        public static void Main6()
         {
             Demo d = new Demo(2);
             d.Print();
