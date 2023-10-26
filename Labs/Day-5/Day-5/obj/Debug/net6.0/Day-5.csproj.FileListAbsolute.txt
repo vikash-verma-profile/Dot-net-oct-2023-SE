@@ -1,0 +1,14 @@
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\bin\Debug\net6.0\Day-5.exe
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\bin\Debug\net6.0\Day-5.deps.json
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\bin\Debug\net6.0\Day-5.runtimeconfig.json
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\bin\Debug\net6.0\Day-5.dll
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\bin\Debug\net6.0\Day-5.pdb
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.AssemblyInfoInputs.cache
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.AssemblyInfo.cs
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.csproj.CoreCompileInputs.cache
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.dll
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\refint\Day-5.dll
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.pdb
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\Day-5.genruntimeconfig.cache
+C:\Users\svdsk31\Desktop\dot-net-oct-2023-se\Labs\Day-5\Day-5\obj\Debug\net6.0\ref\Day-5.dll

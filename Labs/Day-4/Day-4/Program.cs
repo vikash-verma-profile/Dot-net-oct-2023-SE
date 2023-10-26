@@ -65,13 +65,14 @@ namespace Day_4
 
         public static Student[] DeleteStudentByRollNO(int rollno, Student[] students)
         {
-
+            Student[] studentList = new Student[5];
+            return studentList;
         }
     }
     public class Program
     {
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             bool loopBreaker = false;
             Student[] studentList = new Student[5];
