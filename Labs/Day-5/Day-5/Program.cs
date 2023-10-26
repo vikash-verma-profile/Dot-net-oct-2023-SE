@@ -19,7 +19,7 @@
         {
             Console.WriteLine(a + b+c);
         }
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
            sum();
            sum(1, 2);
