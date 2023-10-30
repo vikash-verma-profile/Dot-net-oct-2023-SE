@@ -12,6 +12,10 @@ namespace Day_6
         Inactive=2,
         Hold=3
     }
+    class ABC
+    {
+
+    }
     internal class EnumExample6
     {
         public static void Main()
@@ -20,6 +24,14 @@ namespace Day_6
             {
                 Console.WriteLine(UserStatus.Active);
             }
+            ABC c=new ABC();
+
+            var sampleData = new
+            {
+                StudentID=1,
+                StudentName="Vikash"
+            };
+            Console.WriteLine(sampleData.StudentID);
         }
     }
 }
