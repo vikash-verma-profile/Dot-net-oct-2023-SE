@@ -20,7 +20,7 @@ namespace Day_6
     }
     internal class structsexample5
     {
-        public static void Main()
+        public static void Main5()
         {
             student student;
             student.Name = "Vikash";
