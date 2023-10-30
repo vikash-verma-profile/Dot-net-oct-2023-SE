@@ -8,7 +8,7 @@ namespace Day_6
 {
     internal class StringvsStringBuilder
     {
-        public static void Main()
+        public static void Main4()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Hello");
