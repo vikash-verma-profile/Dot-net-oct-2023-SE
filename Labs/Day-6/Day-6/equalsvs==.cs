@@ -8,7 +8,7 @@ namespace Day_6
 {
     internal class equalsvs__
     {
-        public static void Main()
+        public static void Main3()
         {
             object name = "vikash";
             // string myname = name;
