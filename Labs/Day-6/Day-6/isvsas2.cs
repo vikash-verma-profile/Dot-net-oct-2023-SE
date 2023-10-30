@@ -23,7 +23,7 @@ namespace Day_6
     }
     internal class isvsas2
     {
-        public static void Main()
+        public static void Main2()
         {
             /* is operator
             P o1 = new P();
