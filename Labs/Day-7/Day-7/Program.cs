@@ -8,16 +8,30 @@
             {
                 int Number1, Number2;
                 Number1 = 4;
-                Number2 = 0;
+                Number2 = 2;
                 decimal result = Number1 / Number2;
+               
                 Console.WriteLine(result);
+                throw new Exception();
+
             }
-            catch(Exception ex)
+            catch(DivideByZeroException ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Some error have occured");
             }
-            
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Some error have occured");
+            }
+            catch(Exception ex) {
+                Console.WriteLine("Hi i am coming from throw keyword");
+            }
+            finally{
+                Console.WriteLine("Hi I am in finally block");
+            }
+
         }
     }
 }
