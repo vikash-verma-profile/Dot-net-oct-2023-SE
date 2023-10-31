@@ -48,7 +48,7 @@ namespace Day_7
     }
     internal class CustomExceptions2
     {
-        public static void Main()
+        public static void Main2()
         {
             DivNumers d = new DivNumers();
             d.division(3, 0);
