@@ -20,7 +20,7 @@ namespace Day_8
     }
     internal class GenricClass2
     {
-        public static void Main()
+        public static void Main2()
         {
             Sample<int> ObjSample=new Sample<int>();
             ObjSample.Id = 1;
