@@ -36,7 +36,7 @@ namespace Day_8
     }
     internal class ExtensionMethod4
     {
-        public static void Main()
+        public static void Main4()
         {
             ExtensionClass ex=new ExtensionClass();
             ex.E1();
