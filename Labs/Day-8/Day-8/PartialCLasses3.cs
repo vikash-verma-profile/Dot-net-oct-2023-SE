@@ -30,7 +30,7 @@ namespace Day_8
     }
     internal class PartialCLasses3
     {
-        public static void Main()
+        public static void Main3()
         {
             Employee emp=new Employee();
             emp.DoWork();
