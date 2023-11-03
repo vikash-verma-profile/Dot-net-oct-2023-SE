@@ -28,7 +28,7 @@ namespace Day_9
         {
             return JsonConvert.DeserializeObject<List<Employee>>(File.ReadAllText(filePath));
         }
-        public static void Main()
+        public static void Main3()
         {
             string filePath = "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Dot-net-oct-2023-SE\\Labs\\Day-9\\Day-9\\file\\Textfile.txt";
             WriteInFile(filePath,new List<Employee> { new Employee() { EmployeeID = "Emp101", EmployeeName = "Vikash" } });
