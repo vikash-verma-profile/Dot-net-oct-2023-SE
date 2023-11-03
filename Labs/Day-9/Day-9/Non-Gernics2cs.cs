@@ -12,7 +12,7 @@ namespace Day_9
     //Queue and stack
     internal class Non_Gernics2cs
     {
-        public static void Main()
+        public static void Main2()
         {
             ArrayList array= new ArrayList();
             array.Add(1);
