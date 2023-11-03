@@ -1,0 +1,21 @@
+JSON
+XML
+TEXT
+HTML
+
+<EmployeeList>
+   <Employee>
+      <EmployeeName>Vikash Verma</EmployeeName>
+      <EmployeeSalary>EMP101</EmployeeSalary>
+   </Employee>
+</EmployeeList>
+
+
+{
+  "EmployeeList": {
+    "Employee": {
+      "EmployeeName": "Vikash Verma",
+      "EmployeeSalary": "EMP101"
+    }
+  }
+}
