@@ -1,0 +1,13 @@
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.msg-color-error{
+    color: red;
+}
+.msg-color-success{
+    color: green;
+}

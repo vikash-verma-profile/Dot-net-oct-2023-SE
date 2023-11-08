@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <p style="color:red" id="lblName"></p>
+</body>
+
+<script>
+    const array_name = ["12", "1212", "yhgfh"]
+    const array_name1 = ["12", "1212", "yhgfh"]
+    const Numbers=["Vikash","Isaque","Ram"]
+    const Numbers1=["1","20","0"]
+
+    const NumericValues=[90,40,41,89,60,0];
+    var y=NumericValues.sort(function(a,b){return a-b});
+    console.log(y);
+    for (var index = 0; index < array_name.length; index++) {
+        console.log(array_name[index]);
+    }
+    console.log(array_name[0]);
+    array_name.push("Vikash Verma");
+    //   array_name.pop();
+    //   array_name.pop();
+    //   array_name.pop();
+    //delete array_name[0];
+    console.log(array_name[3].replace(' ',''));
+    console.log(array_name[2].substring(2,3));
+
+    document.getElementById("lblName").innerHTML = array_name.concat(array_name1).toString();
+    var x=Numbers1.sort();
+    console.log(x);
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    Number 1<input type="Number" id="txtNumber1" />
+    Number 2<input type="text" id="txtNumber2" />
+    <input type="button" value="+" onClick="Calculate(1);" />
+	 <input type="button" value="-" onClick="Calculate(2);" />
+	  <input type="button" value="*" onClick="Calculate(3);" />
+	   <input type="button" value="/" onClick="Calculate(4);" />
+    <p style="color:red" id="lblName"></p>
+</body>
+
+<script>
+    function Calculate(input) {
+		console.log(input);
+        var Number1 = Number(document.getElementById("txtNumber1").value);
+        var Number2 = Number(document.getElementById("txtNumber2").value);
+        document.getElementById("lblName").innerHTML = Number1 + Number2;
+
+    }
+
+</script>
+
+</html>
