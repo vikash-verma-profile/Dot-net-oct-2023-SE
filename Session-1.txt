@@ -1,0 +1,38 @@
+1.DDL==>CREATE,ALTER,DROP,RENAME
+2.DML==>INSERT,UPDATE,DELETE
+3.DCL==>GRANT,REVOKE
+4.TCL==>COMMIT,ROLLBACK,SAVEPOINT
+4.DQL==>SELECT
+
+
+Clauses
+1.Where
+2.Like
+3.In and not in
+3.Between
+4. AND /OR
+5.Order BY
+6.TOP
+7.Distinct
+
+
+Group by
+Having
+
+
+
+
+Tomorrow==>
+Functions
+SubQueries
+Indexes
+Try and Catch
+Store Procedures
+Views
+Triggers
+Cursors
+
+3.DCL==>GRANT,REVOKE
+4.TCL==>COMMIT,ROLLBACK,SAVEPOINT
+
+Problem statements
