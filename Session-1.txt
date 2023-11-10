@@ -29,9 +29,10 @@ Indexes
 Try and Catch
 Store Procedures
 Views
+
+
 Triggers
 Cursors
-
 3.DCL==>GRANT,REVOKE
 4.TCL==>COMMIT,ROLLBACK,SAVEPOINT
 
