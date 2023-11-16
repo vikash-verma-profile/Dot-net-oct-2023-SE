@@ -1,0 +1,31 @@
+Microsoft.EntityFrameworkCore ==>7.0.14
+Microsoft.EntityFrameworkCore.Tools ==>7.0.14
+Microsoft.EntityFrameworkCore.SqlServer ==>7.0.14
+
+
+
+
+
+
+
+Commands we will use
+
+Enables these commonly used commands:
+Add-Migration
+Bundle-Migration
+Drop-Database
+Get-DbContext
+Get-Migration
+Optimize-DbContext
+Remove-Migration
+Scaffold-DbContext
+Script-Migration
+Update-Database
+
+
+
+Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=BOOKDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+Update your code with new db changes add Force
+ Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=BOOKDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
