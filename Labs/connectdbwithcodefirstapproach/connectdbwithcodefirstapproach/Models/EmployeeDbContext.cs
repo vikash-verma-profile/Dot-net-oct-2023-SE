@@ -15,7 +15,9 @@ namespace connectdbwithcodefirstapproach.Models
 
         }
 
-        DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Department> Department { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-PP0TB7N;Initial Catalog=EmployeeDB;Integrated Security=True;TrustServerCertificate=True");
