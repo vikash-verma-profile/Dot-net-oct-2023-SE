@@ -47,6 +47,20 @@ namespace connectdbwithcodefirstapproach
             {
                 Console.WriteLine(item.Id + " | " + item.EmployeeName +" | "+item.DepartmentName);
             }
+            Console.WriteLine("===========Take===========");
+            var dataTake = db.Employees.Take(2);
+            foreach (var item in dataTake)
+            {
+                Console.WriteLine(item.ID + " | " + item.Name );
+            }
+            Console.WriteLine("===========Except===========");
+            var number1 = new List<int>() { 1, 2, 3, 4 };
+            var number2 = new List<int>() { 1, 2 };
+            var numbes = number1.Except(number1);
+            foreach (var item in numbes)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
