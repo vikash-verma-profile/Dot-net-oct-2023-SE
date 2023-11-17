@@ -38,7 +38,15 @@ namespace connectdbwithcodefirstapproach
             }
             Console.WriteLine("==============First Vs FirstORDefault============================");
             var employeeListFirst = db.Employees.Where(x => x.ID == 10).FirstOrDefault();
-         
+
+            Console.WriteLine("===========Join===========");
+            var data = db.Employees.Join(db.Department, emp => emp.DepartmentId, dep => dep.Id
+            , (emp, dep) => new { Id = emp.ID, EmployeeName = emp.Name, DepartmentName = dep.Name }
+            );
+            foreach (var item in data)
+            {
+                Console.WriteLine(item.Id + " | " + item.EmployeeName +" | "+item.DepartmentName);
+            }
         }
     }
 }
