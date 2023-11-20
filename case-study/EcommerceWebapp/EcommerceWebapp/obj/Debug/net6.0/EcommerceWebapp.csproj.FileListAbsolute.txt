@@ -29,3 +29,5 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWe
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWebapp\EcommerceWebapp\obj\Debug\net6.0\EcommerceWebapp.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWebapp\EcommerceWebapp\obj\Debug\net6.0\EcommerceWebapp.genruntimeconfig.cache
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWebapp\EcommerceWebapp\obj\Debug\net6.0\ref\EcommerceWebapp.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWebapp\EcommerceWebapp\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceWebapp\EcommerceWebapp\obj\Debug\net6.0\EcommerceWebapp.csproj.CopyComplete

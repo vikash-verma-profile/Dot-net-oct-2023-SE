@@ -1,6 +1,8 @@
 ﻿using EcommerceWebapp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace EcommerceWebapp.Controllers
 {
@@ -15,7 +17,11 @@ namespace EcommerceWebapp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            HttpClient client=new HttpClient();
+            var data = client.GetAsync("http://localhost:5016/api/Product").Result.Content.
+                ReadAsStringAsync().Result;
+            var productlist=JsonConvert.DeserializeObject<IEnumerable<Product>>(data);
+            return View(productlist);
         }
 
         public IActionResult Privacy()
