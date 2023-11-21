@@ -8,7 +8,13 @@ namespace EcommerceAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        EcommerceDbContext db = new EcommerceDbContext();
+
+        private readonly EcommerceDbContext db;
+
+        public ProductController(EcommerceDbContext context)
+        {
+            db=context;
+        }
         [HttpGet]
         public IEnumerable<TblProduct> Get()
         {
