@@ -1,3 +1,5 @@
+using Microsoft.Extensions.FileProviders;
+
 namespace EcommerceWebapp
 {
     public class Program
@@ -21,7 +23,11 @@ namespace EcommerceWebapp
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+                RequestPath = new PathString("/Images")
+            });
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

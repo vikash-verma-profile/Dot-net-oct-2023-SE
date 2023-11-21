@@ -7,11 +7,14 @@
     @{
         foreach (var item in Model)
         {
-              <div class="col-sm-6" style="padding:10px">
-        <div class="card">
+            <div class="col-sm-6" style="padding:10px; width: 18rem;">
+                
+                <div class="card">
+                    <img src="~/Images/@item.ProductImage" class="card-img-top" alt="..." />
             <div class="card-body">
                 <h5 class="card-title">@item.PoductName</h5>
                 <p class="card-text">@item.ProductDescription</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
         </div>
     </div>

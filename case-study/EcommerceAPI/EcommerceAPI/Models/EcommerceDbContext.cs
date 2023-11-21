@@ -19,6 +19,8 @@ public partial class EcommerceDbContext : DbContext
 
     public virtual DbSet<TblLogin> TblLogins { get; set; }
 
+    public virtual DbSet<TblOrder> TblOrders { get; set; }
+
     public virtual DbSet<TblProduct> TblProducts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -42,6 +44,19 @@ public partial class EcommerceDbContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(200);
             entity.Property(e => e.Password).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(2000);
+        });
+
+        modelBuilder.Entity<TblOrder>(entity =>
+        {
+            entity.ToTable("tblOrder");
+
+            entity.Property(e => e.OrderNo)
+                .HasMaxLength(10)
+                .IsFixedLength();
+            entity.Property(e => e.UserId)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .HasColumnName("UserID");
         });
 
         modelBuilder.Entity<TblProduct>(entity =>
