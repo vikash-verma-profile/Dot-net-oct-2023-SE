@@ -29,3 +29,6 @@ Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=BOOKDB;Integrate
 
 Update your code with new db changes add Force
  Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=BOOKDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+
+Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=ECommerceDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

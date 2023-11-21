@@ -14,5 +14,34 @@ namespace EcommerceAPI.Controllers
         {
             return db.TblProducts;
         }
+        [HttpPost]
+        public IActionResult Post(TblProduct product)
+        {
+            db.TblProducts.Add(product);
+            db.SaveChanges();
+            return Ok("your record is being added successfully");
+        }
+        [HttpPut]
+        public IActionResult Put(TblProduct product)
+        {
+            db.TblProducts.Update(product);
+            db.SaveChanges();
+            return Ok("your record is being updated successfully");
+        }
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+           var product=db.TblProducts.Where(x=>x.Id==id).FirstOrDefault();
+            if (product != null)
+            {
+                db.TblProducts.Remove(product);
+                db.SaveChanges();
+                return Ok("your record is being deleted successfully");
+            }
+            else
+            {
+                return Ok("No record found with this ID.");
+            }
+        }
     }
 }
