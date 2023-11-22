@@ -20,6 +20,7 @@ namespace EcommerceWebapp.Controllers
             var response = JsonConvert.DeserializeObject<ResponseViewModel>(data);
             if (response.isLogin)
             {
+                HttpContext.Session.SetString("email",login.UserName);
                 return RedirectToAction("Index", "Order");
             }
             else

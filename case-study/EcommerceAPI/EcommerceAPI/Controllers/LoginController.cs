@@ -93,7 +93,7 @@ namespace EcommerceAPI.Controllers
             _context.TblLogins.Add(tblLogin);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTblLogin", new { id = tblLogin.Id }, tblLogin);
+            return CreatedAtAction("GetTblLogin", new { isLogin = true, Message = "registered Successfully" });
         }
 
         // POST: api/Login
