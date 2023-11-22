@@ -28,5 +28,21 @@ namespace EcommerceWebapp.Controllers
                 return View();
             }
         }
+        public JsonResult CheckLogin()
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("email")))
+            {
+                return Json(new {username=""});
+            }
+            else
+            {
+                return Json(new { username = HttpContext.Session.GetString("email") });
+            }
+        }
+        public IActionResult logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }

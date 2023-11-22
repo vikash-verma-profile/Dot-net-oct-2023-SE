@@ -43,7 +43,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" onclick="logout()" href="#">Sign out</a></li>
+                        <li><a class="dropdown-item" asp-action="logout" asp-controller="Login">Sign out</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,3 +66,25 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<script>
+    $.ajax({
+        type:"GET",
+        url:"/Login/CheckLogin",
+        success:function(data){
+            if(data.username){
+                $('#user-block').show();
+                $('#login-block').hide();
+                $('#register-block').hide();
+            }
+            else{
+                $('#user-block').hide();
+                $('#login-block').show();
+                $('#register-block').show();
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    });
+
+</script>
