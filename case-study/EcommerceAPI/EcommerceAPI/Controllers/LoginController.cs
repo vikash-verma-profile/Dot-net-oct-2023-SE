@@ -105,7 +105,7 @@ namespace EcommerceAPI.Controllers
            if(_context.TblLogins.Any(x=>x.UserName==tblLogin.UserName && x.Password==tblLogin.Password))
             {
                 var data = _context.TblLogins.Where(x => x.UserName == tblLogin.UserName && x.Password == tblLogin.Password).FirstOrDefault();
-                return Ok(new {isLogin=true,Message="validated User", UserId = data.Id });
+                return Ok(new {isLogin=true,isAdmin= data.IsAdmin, Message="validated User", UserId = data.Id });
             }
             else
             {

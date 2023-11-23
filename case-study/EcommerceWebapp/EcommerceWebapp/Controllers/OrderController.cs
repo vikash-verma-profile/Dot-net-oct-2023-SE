@@ -9,11 +9,25 @@ namespace EcommerceWebapp.Controllers
     {
         public IActionResult Index()
         {
-            HttpClient client = new HttpClient();
-            var data = client.GetAsync("http://localhost:5016/api/Order").Result.Content.
-                ReadAsStringAsync().Result;
-            var orderlist = JsonConvert.DeserializeObject<IEnumerable<OrderViewModel>>(data);
-            return View(orderlist);
+           
+            if (HttpContext.Session.GetString("isAdmin") == "1")
+            {
+                HttpClient client = new HttpClient();
+                var data = client.GetAsync("http://localhost:5016/api/Order/get-all-orders").Result.Content.
+                    ReadAsStringAsync().Result;
+                var orderlist = JsonConvert.DeserializeObject<IEnumerable<OrderViewModel>>(data);
+                return View(orderlist);
+            }
+            else
+            {
+                var userId = HttpContext.Session.GetString("userid");
+                HttpClient client = new HttpClient();
+                var data = client.GetAsync("http://localhost:5016/api/Order/get-orders-by-id?Id="+ userId).Result.Content.
+                    ReadAsStringAsync().Result;
+                var orderlist = JsonConvert.DeserializeObject<IEnumerable<OrderViewModel>>(data);
+                return View(orderlist);
+            }
+           
         }
         public IActionResult BuyNow(int Id)
         {

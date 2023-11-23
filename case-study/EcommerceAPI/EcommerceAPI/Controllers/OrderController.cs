@@ -23,7 +23,8 @@ namespace EcommerceAPI.Controllers
 
         // GET: api/Order
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<OrderViewModel>>> GetTblOrders()
+        [Route("get-all-orders")]
+        public async Task<ActionResult<IEnumerable<TblOrder>>> GetTblOrders()
         {
           if (_context.TblOrders == null)
           {
@@ -32,6 +33,17 @@ namespace EcommerceAPI.Controllers
             return await _context.TblOrders.ToListAsync();
         }
 
+        // GET: api/Order
+        [HttpGet]
+        [Route("get-orders-by-id")]
+        public async Task<ActionResult<IEnumerable<TblOrder>>> GetTblOrdersByID(string Id)
+        {
+            if (_context.TblOrders == null)
+            {
+                return NotFound();
+            }
+            return await _context.TblOrders.Where(x=>x.UserId==Id).ToListAsync();
+        }
         // GET: api/Order/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TblOrder>> GetTblOrder(int id)

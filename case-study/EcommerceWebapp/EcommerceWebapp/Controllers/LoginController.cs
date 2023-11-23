@@ -1,4 +1,5 @@
 ﻿using EcommerceWebapp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -22,6 +23,7 @@ namespace EcommerceWebapp.Controllers
             {
                 HttpContext.Session.SetString("email",login.UserName);
                 HttpContext.Session.SetString("userid", response.UserId);
+                HttpContext.Session.SetString("isAdmin", response.isAdmin.ToString());
                 return RedirectToAction("Index", "Order");
             }
             else
