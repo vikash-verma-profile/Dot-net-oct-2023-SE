@@ -1,7 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<OrderViewModel>
 
-Welcome to order
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order Number</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var item in Model)
+        {
+                 <tr>
+          <th scope="row">@item.Id</th>
+                    <td>@item.OrderNo</td>
+                    <td>@item.ProductId</td>
+                    <td>@item.Quantity</td>
+        </tr>
+        }
+
+  </tbody>
+</table>

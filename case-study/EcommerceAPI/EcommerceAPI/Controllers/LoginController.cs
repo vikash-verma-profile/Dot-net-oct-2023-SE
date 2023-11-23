@@ -93,7 +93,7 @@ namespace EcommerceAPI.Controllers
             _context.TblLogins.Add(tblLogin);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTblLogin", new { isLogin = true, Message = "registered Successfully" });
+            return CreatedAtAction("GetTblLogin", new { isLogin = true, Message = "registered Successfully", UserId= tblLogin.Id });
         }
 
         // POST: api/Login
@@ -104,7 +104,8 @@ namespace EcommerceAPI.Controllers
         {
            if(_context.TblLogins.Any(x=>x.UserName==tblLogin.UserName && x.Password==tblLogin.Password))
             {
-                return Ok(new {isLogin=true,Message="validated User"});
+                var data = _context.TblLogins.Where(x => x.UserName == tblLogin.UserName && x.Password == tblLogin.Password).FirstOrDefault();
+                return Ok(new {isLogin=true,Message="validated User", UserId = data.Id });
             }
             else
             {

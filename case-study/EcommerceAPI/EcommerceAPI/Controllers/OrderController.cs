@@ -92,7 +92,12 @@ namespace EcommerceAPI.Controllers
             _context.TblOrders.Add(tblOrder);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTblOrder", new { id = tblOrder.Id }, tblOrder);
+            var data = _context.TblOrders.Where(x => x.Id == tblOrder.Id).FirstOrDefault();
+            data.OrderNo = "ORD" + data.Id;
+            _context.TblOrders.Update(data);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("PostTblOrder", new { OrderId=data.OrderNo });
         }
 
         // DELETE: api/Order/5
