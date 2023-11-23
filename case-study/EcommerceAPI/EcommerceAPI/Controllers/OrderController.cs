@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EcommerceAPI.Models;
+using EcommerceAPI.ViewModels;
 
 namespace EcommerceAPI.Controllers
 {
@@ -22,7 +23,7 @@ namespace EcommerceAPI.Controllers
 
         // GET: api/Order
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TblOrder>>> GetTblOrders()
+        public async Task<ActionResult<IEnumerable<OrderViewModel>>> GetTblOrders()
         {
           if (_context.TblOrders == null)
           {
