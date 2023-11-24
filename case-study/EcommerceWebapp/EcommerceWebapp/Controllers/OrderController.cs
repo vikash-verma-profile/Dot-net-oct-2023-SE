@@ -2,17 +2,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
-
+using System.Net.Http.Headers;
 namespace EcommerceWebapp.Controllers
 {
     public class OrderController : Controller
     {
         public IActionResult Index()
         {
-           
+            HttpClient client = new HttpClient();
+            var token = HttpContext.Session.GetString("token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             if (HttpContext.Session.GetString("isAdmin") == "1")
             {
-                HttpClient client = new HttpClient();
+              
                 var data = client.GetAsync("http://localhost:5016/api/Order/get-all-orders").Result.Content.
                     ReadAsStringAsync().Result;
                 var orderlist = JsonConvert.DeserializeObject<IEnumerable<OrderViewModel>>(data);
@@ -21,7 +23,6 @@ namespace EcommerceWebapp.Controllers
             else
             {
                 var userId = HttpContext.Session.GetString("userid");
-                HttpClient client = new HttpClient();
                 var data = client.GetAsync("http://localhost:5016/api/Order/get-orders-by-id?Id="+ userId).Result.Content.
                     ReadAsStringAsync().Result;
                 var orderlist = JsonConvert.DeserializeObject<IEnumerable<OrderViewModel>>(data);

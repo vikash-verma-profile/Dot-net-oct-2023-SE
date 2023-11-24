@@ -24,6 +24,7 @@ namespace EcommerceWebapp.Controllers
                 HttpContext.Session.SetString("email",login.UserName);
                 HttpContext.Session.SetString("userid", response.UserId);
                 HttpContext.Session.SetString("isAdmin", response.isAdmin.ToString());
+                HttpContext.Session.SetString("token", response.token);
                 return RedirectToAction("Index", "Order");
             }
             else
