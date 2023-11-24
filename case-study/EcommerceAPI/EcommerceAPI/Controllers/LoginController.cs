@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EcommerceAPI.Models;
+using EcommerceAPI.ViewModels;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace EcommerceAPI.Controllers
 {
@@ -14,10 +18,12 @@ namespace EcommerceAPI.Controllers
     public class LoginController : ControllerBase
     {
         private readonly EcommerceDbContext _context;
+        private readonly IConfiguration _config;
 
-        public LoginController(EcommerceDbContext context)
+        public LoginController(EcommerceDbContext context,IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
         // GET: api/Login
@@ -105,7 +111,7 @@ namespace EcommerceAPI.Controllers
            if(_context.TblLogins.Any(x=>x.UserName==tblLogin.UserName && x.Password==tblLogin.Password))
             {
                 var data = _context.TblLogins.Where(x => x.UserName == tblLogin.UserName && x.Password == tblLogin.Password).FirstOrDefault();
-                return Ok(new {isLogin=true,isAdmin= data.IsAdmin, Message="validated User", UserId = data.Id });
+                return Ok(new {isLogin=true,isAdmin= data.IsAdmin, Message="validated User", UserId = data.Id,token= GenerateToken(new LoginViewModel() {UserName=data.UserName,Password=data.Password }) });
             }
             else
             {
@@ -135,6 +141,23 @@ namespace EcommerceAPI.Controllers
         private bool TblLoginExists(int id)
         {
             return (_context.TblLogins?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        [NonAction]
+        private string GenerateToken(LoginViewModel login)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:Key"]));
+            var credentials = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
+            var token = new JwtSecurityToken(
+                _config["JWT:Issuer"],
+                _config["JWT:Audience"],
+                null,
+                null,
+                DateTime.Now.AddMinutes(120),
+                credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

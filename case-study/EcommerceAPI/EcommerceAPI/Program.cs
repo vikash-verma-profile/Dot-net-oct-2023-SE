@@ -1,5 +1,8 @@
 using EcommerceAPI.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EcommerceAPI
 {
@@ -12,11 +15,36 @@ namespace EcommerceAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+            //adding bearer config
+
+            builder.Services.AddAuthentication(
+                x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme=JwtBearerDefaults.AuthenticationScheme;
+                }).AddJwtBearer(
+                o =>
+                {
+                    var key = Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]);
+                    o.SaveToken = true;
+                    o.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = builder.Configuration["JWT:Issuer"],
+                        ValidAudience = builder.Configuration["JWT:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateAudience = false,
+                        ValidateIssuerSigningKey = true,
+                        ValidateIssuer = false,
+                        ValidateLifetime = true
+                    };
+                });
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<EcommerceDbContext>(options=>
-            options.UseSqlServer("Data Source=DESKTOP-PP0TB7N;Initial Catalog=ECommerceDB;Integrated Security=True;TrustServerCertificate=True"));
+            options.UseSqlServer(builder.Configuration["EcommerceDbConnection"]));
             var app = builder.Build();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -24,6 +52,7 @@ namespace EcommerceAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
             app.Run();

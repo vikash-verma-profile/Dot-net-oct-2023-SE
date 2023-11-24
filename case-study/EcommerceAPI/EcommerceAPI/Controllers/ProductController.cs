@@ -1,4 +1,5 @@
 ﻿using EcommerceAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ namespace EcommerceAPI.Controllers
             return db.TblProducts;
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Post(TblProduct product)
         {
             db.TblProducts.Add(product);

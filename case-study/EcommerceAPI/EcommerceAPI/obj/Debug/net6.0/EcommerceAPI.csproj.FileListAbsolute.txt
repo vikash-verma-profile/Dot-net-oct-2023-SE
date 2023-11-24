@@ -265,3 +265,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceAP
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceAPI\EcommerceAPI\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceAPI\EcommerceAPI\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceAPI\EcommerceAPI\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-net-oct-2023-SE\case-study\EcommerceAPI\EcommerceAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

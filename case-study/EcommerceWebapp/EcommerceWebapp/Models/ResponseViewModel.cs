@@ -6,5 +6,7 @@
         public string Message { get; set; }
         public string UserId { get; set; }
         public int isAdmin { get; set; }
+
+        public string token { get; set; }
     }
 }
